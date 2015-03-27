@@ -1,16 +1,39 @@
 package com.example.triviandroid;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_title);
+		addStartButtonListener();
+	}
+	
+	public void addStartButtonListener() {
+		
+		final Context context = this;
+		Button startButton = (Button) findViewById(R.id.startButton);
+		startButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				
+				Intent startIntent = new Intent(context, MenuActivity.class);
+				startActivity(startIntent);
+			}
+
+		});
+		
 	}
 
 	@Override

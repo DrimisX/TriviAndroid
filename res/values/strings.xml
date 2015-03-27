@@ -5,5 +5,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="hello_title">Hello Title!</string>
+    <string name="logo_desc">Logo Image Description</string>
+    <string name="title_word_image_desc">Word Logo for TRIVIANDROID</string>
+    <string name="start_button_text">Tap to start</string>
 
 </resources>
