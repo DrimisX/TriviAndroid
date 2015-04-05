@@ -30,6 +30,7 @@ public class MainActivity extends Activity {
 				
 				Intent startIntent = new Intent(context, MenuActivity.class);
 				startActivity(startIntent);
+				finish();
 			}
 
 		});

@@ -8,5 +8,6 @@
     <string name="logo_desc">Logo Image Description</string>
     <string name="title_word_image_desc">Word Logo for TRIVIANDROID</string>
     <string name="start_button_text">Tap to start</string>
+    <string name="app_menu_name">Main Menu</string>
 
 </resources>
