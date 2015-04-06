@@ -15,7 +15,49 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
         android:contentDescription="@string/title_word_image_desc"
         android:src="@drawable/triviandroid_title_solid" />
+
+    <Button
+        android:id="@+id/buttonPlay"
+        style="@style/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:text="@string/play_text" />
+
+    <Button
+        android:id="@+id/buttonLeaderboard"
+        style="@style/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/leaderboard_text" />
+
+    <Button
+        android:id="@+id/buttonMyStats"
+        style="@style/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_stats_text"
+        android:visibility="invisible" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/buttonSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/buttonSignOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:text="@string/sign_out_text"
+        android:visibility="invisible"
+        android:width="110dp" />
 
 </LinearLayout>

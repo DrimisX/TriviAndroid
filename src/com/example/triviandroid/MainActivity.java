@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				Intent startIntent = new Intent(context, MenuActivity.class);
+				Intent startIntent = new Intent(context, GameActivity.class);
 				startActivity(startIntent);
 				finish();
 			}

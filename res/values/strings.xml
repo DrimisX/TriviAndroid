@@ -9,5 +9,10 @@
     <string name="title_word_image_desc">Word Logo for TRIVIANDROID</string>
     <string name="start_button_text">Tap to start</string>
     <string name="app_menu_name">Main Menu</string>
+    <string name="play_text">PLAY</string>
+    <string name="leaderboard_text">LEADERBOARD</string>
+    <string name="my_stats_text">MY STATS</string>
+    <string name="sign_in_text">Sign In</string>
+    <string name="sign_out_text">Sign Out</string>
 
 </resources>
