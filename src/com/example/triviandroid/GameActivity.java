@@ -14,7 +14,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.os.Bundle;
-//import android.widget.Button;
+import android.widget.Button;
 import android.widget.Toast;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -39,7 +39,11 @@ public class GameActivity extends Activity
 	//  - END OF Misc. Constants -
 	
 	// Misc. Variables
+	private View signInView = findViewById(R.id.buttonSignIn);
+	private View signOutView = findViewById(R.id.buttonSignOut);
 	
+	private SignInButton signInButton = (SignInButton) signInView;
+	private Button signOutButton = (Button) signOutView;
 	// - END OF Misc. Variables -
 	 
 	public void onCreate(Bundle savedInstanceState) {
@@ -47,9 +51,10 @@ public class GameActivity extends Activity
 		setContentView(R.layout.activity_menu_main);
 		
 		// register Google Plus Sign-In button listener
-		SignInButton signInButton = (SignInButton) findViewById(R.id.buttonSignIn);
 		signInButton.setOnClickListener(this);
 		
+		// register Sign-Out button listener
+		signOutButton.setOnClickListener(this);
 		
 		// Google API Client Builder
 		mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -136,11 +141,15 @@ public class GameActivity extends Activity
 		  && !mGoogleApiClient.isConnecting()) {
 			mSignInClicked = true;
 			resolveSignInError();
+			signOutButton.setVisibility(View.VISIBLE);
+			signInButton.setVisibility(View.GONE);
 		} else if (v.getId() == R.id.buttonSignOut) {
 			if (mGoogleApiClient.isConnected()) {
 				Plus.AccountApi.clearDefaultAccount(mGoogleApiClient);
 				mGoogleApiClient.disconnect();
 				mGoogleApiClient.connect();
+				signOutButton.setVisibility(View.INVISIBLE);
+				signInButton.setVisibility(View.VISIBLE);
 			}
 		}
 	}
